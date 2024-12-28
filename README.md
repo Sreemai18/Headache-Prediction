@@ -27,34 +27,6 @@ Significant correlation identified between stress levels and headache risk.
 Python 3.8+
 Libraries: pandas, numpy, scikit-learn, tensorflow, matplotlib, seaborn
 
-## Installation
-Clone the repository:
-bash
-git clone https://github.com/your-repo/headache-prediction.git
-Navigate to the directory:
-bash
-Copy code
-cd headache-prediction
-Install dependencies:
-bash
-Copy code
-pip install -r requirements.txt
-Usage
-Data Preprocessing:
-Clean and preprocess the dataset using preprocess_data.py.
-bash
-Copy code
-python preprocess_data.py
-Train Models:
-Train different machine learning models with train_models.py.
-bash
-Copy code
-python train_models.py
-Evaluate Models:
-Generate accuracy metrics and visualizations with evaluate.py.
-bash
-Copy code
-python evaluate.py
 ## Contributing
 Contributions are welcome! Fork the repository, create a branch, and submit a pull request with your improvements.
 
