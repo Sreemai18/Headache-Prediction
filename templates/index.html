@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>HeadacheGuard AI</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="text-center mt-4">🧠 HeadacheGuard AI</h1>
+
+<p class="text-center">
+Predict headache risk using lifestyle and health factors
+</p>
+
+<div class="card shadow p-4 mt-4">
+
+<form action="/predict" method="post">
+
+<div class="row">
+
+<div class="col-md-6">
+<label>Age</label>
+<input type="number" name="age" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+<label>Sleep Duration (hours)</label>
+<input type="number" step="0.1" name="sleep" class="form-control" required>
+</div>
+
+<div class="col-md-6 mt-3">
+<label>Quality of Sleep (1-10)</label>
+<input type="number" name="quality" class="form-control" required>
+</div>
+
+<div class="col-md-6 mt-3">
+<label>Physical Activity Level</label>
+<input type="number" name="activity" class="form-control" required>
+</div>
+
+<div class="col-md-6 mt-3">
+<label>Stress Level (1-10)</label>
+<input type="number" name="stress" class="form-control" required>
+</div>
+
+<div class="col-md-6 mt-3">
+<label>Heart Rate</label>
+<input type="number" name="heart" class="form-control" required>
+</div>
+
+<div class="col-md-6 mt-3">
+<label>Daily Steps</label>
+<input type="number" name="steps" class="form-control" required>
+</div>
+
+<div class="col-md-6 mt-3">
+<label>Systolic BP</label>
+<input type="number" name="systolic" class="form-control" required>
+</div>
+
+<div class="col-md-6 mt-3">
+<label>Diastolic BP</label>
+<input type="number" name="diastolic" class="form-control" required>
+</div>
+
+</div>
+
+<button class="btn btn-primary mt-4 w-100">Predict Headache Risk</button>
+
+</form>
+
+</div>
+
+{% if prediction_text %}
+
+<div class="result-card mt-4 text-center">
+
+<h3>Prediction Result</h3>
+
+<h2>{{ prediction_text }}</h2>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
